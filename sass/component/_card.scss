@@ -1,0 +1,43 @@
+.card {
+  // define perspective on parent
+  perspective: 1500rem;
+  -moz-perspective: 150rem;
+  // 
+  position: relative;
+  height: 50rem;
+
+  &__side {
+    font-size: 3rem;
+    height: 50rem;
+    transition: all 0.8s ease-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    // hidden back part
+    backface-visibility: hidden;
+    border-radius: 3px;
+    box-shadow: 0 1.6rem 4rem $color-primary-dark;
+
+    &--front {
+      background-color: gray;
+    }
+
+    &--back {
+      transform: rotateY(180deg);
+
+      &-1 {
+        background-image: linear-gradient(to right bottom, $color-secondary--yellow, $color-secondary--orange);
+      }
+    }
+  }
+
+
+  &:hover &__side--front {
+    transform: rotateY(180deg);
+  }
+
+  &:hover &__side--back {
+    transform: rotateY(0);
+  }
+}
