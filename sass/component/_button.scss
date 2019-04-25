@@ -39,6 +39,18 @@
     }
   }
 
+  &--green {
+    background-color: $color-primary-dark;
+    color: $color-white;
+    letter-spacing: 0.4rem;
+    font-weight: 400;
+    box-shadow: 0 0.3rem 0.05rem $color-shadow-btn-white;
+
+    &::after {
+      background-color: $color-btn--white-after;
+    }
+  }
+
   &::after {
     content: "";
     display: inline-block;

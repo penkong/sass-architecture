@@ -112,6 +112,18 @@ body {
 .u-margin-bottom-small {
   margin-bottom: 2rem; }
 
+.u-margin-top-small {
+  margin-bottom: 2rem; }
+
+.u-margin-top-medium {
+  margin-bottom: 4rem; }
+
+.u-margin-top-big {
+  margin-bottom: 8rem; }
+
+.u-margin-top-huge {
+  margin-bottom: 10rem; }
+
 .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
@@ -140,6 +152,15 @@ body {
   font-weight: 600;
   box-shadow: 0 0.3rem 0.05rem #4444446e; }
   .btn--white::after {
+    background-color: rgba(140, 203, 255, 0.2); }
+
+.btn--green {
+  background-color: #074177b0;
+  color: #fff;
+  letter-spacing: 0.4rem;
+  font-weight: 400;
+  box-shadow: 0 0.3rem 0.05rem #4444446e; }
+  .btn--green::after {
     background-color: rgba(140, 203, 255, 0.2); }
 
 .btn::after {
@@ -180,31 +201,99 @@ body {
   transform: translateY(0); }
 
 .card {
-  perspective: 1500rem;
   -moz-perspective: 150rem;
+  perspective: 1500rem;
   position: relative;
-  height: 50rem; }
+  height: 53rem; }
   .card__side {
     font-size: 3rem;
-    height: 50rem;
-    transition: all 0.8s ease-out;
+    height: 53rem;
+    transition: all 1s ease-out;
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 88%;
     backface-visibility: hidden;
     border-radius: 3px;
-    box-shadow: 0 1.6rem 4rem #074177b0; }
+    overflow: hidden;
+    box-shadow: 0 1.6rem 1rem #777; }
     .card__side--front {
-      background-color: gray; }
+      background-color: white; }
     .card__side--back {
       transform: rotateY(180deg); }
       .card__side--back-1 {
-        background-image: linear-gradient(to right bottom, #ffb900, #ff7730); }
+        background-image: linear-gradient(to right bottom, #ffbb00, #ff7830); }
+      .card__side--back-2 {
+        background-image: linear-gradient(to right bottom, #9cff4a, #0b9133); }
+      .card__side--back-3 {
+        background-image: linear-gradient(to right bottom, #2998ff, #5643fa); }
   .card:hover .card__side--front {
-    transform: rotateY(180deg); }
+    transform: rotateY(-180deg); }
   .card:hover .card__side--back {
     transform: rotateY(0); }
+  .card__picture {
+    background-size: cover;
+    height: 23rem;
+    background-blend-mode: hard-light;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px; }
+    .card__picture--1 {
+      background-image: linear-gradient(to right bottom, #ffbb00, #ff7830), url(../img/nat-5.jpg); }
+    .card__picture--2 {
+      background-image: linear-gradient(to right bottom, #9cff4a, #0b9133), url(../img/nat-6.jpg); }
+    .card__picture--3 {
+      background-image: linear-gradient(to right bottom, #2998ff, #5643fa), url(../img/nat-7.jpg); }
+  .card__heading {
+    font-size: 2.5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: right;
+    color: #ffffff;
+    position: absolute;
+    top: 11.8rem;
+    right: 2rem;
+    width: 60%; }
+  .card__heading-span {
+    padding: 1rem 1.5rem;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone; }
+    .card__heading-span--1 {
+      background-image: linear-gradient(to right bottom, #ffbb00, #ff7830); }
+    .card__heading-span--2 {
+      background-image: linear-gradient(to right bottom, #9cff4a, #0b9133); }
+    .card__heading-span--3 {
+      padding-bottom: 1.2rem;
+      background-image: linear-gradient(to right bottom, #2998ff, #5643fa); }
+  .card__details {
+    padding: 3rem; }
+    .card__details ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto; }
+      .card__details ul li {
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 1rem; }
+        .card__details ul li:not(:last-child) {
+          border-bottom: 1px solid rgba(121, 121, 121, 0.46); }
+  .card__cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center; }
+  .card__price-box {
+    margin-bottom: 7rem;
+    color: #ffffff; }
+  .card__price-only {
+    font-size: 1.4rem;
+    text-transform: uppercase; }
+  .card__price-value {
+    font-size: 6rem;
+    font-weight: 100; }
 
 .composition {
   position: relative; }
@@ -316,5 +405,5 @@ body {
 
 .section-tours {
   background: #f7f7f7;
-  padding: 25rem 0 50rem 0;
+  padding: 25rem 0 10rem 0;
   margin-top: -9rem; }
