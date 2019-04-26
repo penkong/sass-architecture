@@ -124,6 +124,20 @@ body {
 .u-margin-top-huge {
   margin-bottom: 10rem; }
 
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: .2;
+  overflow: hidden; }
+  .bg-video__content {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; }
+
 .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
@@ -343,6 +357,51 @@ body {
   .feature-box:hover {
     transform: translateY(-0.5rem) scale(1.02); }
 
+.story {
+  width: 75%;
+  margin: 0 auto;
+  box-shadow: 0 1.5rem 1.5rem rgba(128, 128, 128, 0.322);
+  background-color: rgba(255, 255, 255, 0.55);
+  border-radius: 3px;
+  padding: 6rem;
+  padding-left: 9rem;
+  font-size: 1.6rem;
+  transform: skewX(-10deg); }
+  .story__shape {
+    width: 15rem;
+    height: 15rem;
+    float: left;
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    shape-outside: circle(50% at 50% 50%);
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(45% at 50% 50%);
+    transform: translateX(-2rem) skewX(10deg);
+    position: relative; }
+  .story__image {
+    height: 100%;
+    transform: translateX(-3.9rem) scale(1.15);
+    transition: all 0.8s; }
+  .story__text {
+    transform: skewX(10deg); }
+  .story__caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    text-align: center;
+    opacity: 0;
+    transition: all 0.8s;
+    backface-visibility: hidden; }
+  .story:hover .story__caption {
+    opacity: 1;
+    transform: translate(-50%, -50%); }
+  .story:hover .story__image {
+    transform: translateX(-4rem) scale(0.99);
+    filter: blur(2px) brightness(90%); }
+
 .header {
   height: 95vh;
   background-image: linear-gradient(to right bottom, #89d3f541, #074177b0), url(../img/hero.jpg);
@@ -407,3 +466,7 @@ body {
   background: #f7f7f7;
   padding: 25rem 0 10rem 0;
   margin-top: -9rem; }
+
+.section-stories {
+  position: relative;
+  padding: 15rem 0; }
