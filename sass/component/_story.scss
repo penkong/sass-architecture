@@ -9,6 +9,15 @@
   font-size: 1.6rem;
   transform: skewX(-10deg);
 
+  @include respond(tab-port) {
+    width: 100%;
+    padding: 3rem;
+    padding-left: 6rem;
+  }
+
+  @include respond(phone) {
+    transform: skewX(0);
+  }
   // for skew shape text
   // &>* {
   //   transform: skewX(10deg);
@@ -27,6 +36,10 @@
     transform: translateX(-2rem) skewX(10deg);
     // for  caption
     position: relative;
+
+    @include respond(phone) {
+      transform: translateX(-2rem) skewX(0);
+    }
   }
 
   &__image {
@@ -37,6 +50,10 @@
 
   &__text {
     transform: skewX(10deg);
+
+    @include respond(phone) {
+      transform: skewX(0);
+    }
   }
 
   &__caption {
